@@ -78,7 +78,7 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	padding-bottom: 38px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #fff;
 
 }
 .menu__list{
@@ -114,11 +114,12 @@ header{
 	height: 50px;
 	fill: #494949;
 }
+/* Burger menu */
 /*============================
 =============Intro============
 ============================== */
 .intro{
-	background: url(/img/header.jpg) center no-repeat ;
+	background: url(/img/header.jpg) left top no-repeat ;
 	background-size: cover;
 	padding-top:400px;
 	padding-bottom: 204px;
@@ -239,10 +240,14 @@ header{
 	padding: 114px 0;
 	display: flex;
 	flex-wrap: wrap;
+	overflow: hidden;
 }
 .features__content,
 .features__img{
 	width: 50%;
+}
+.features__content{
+	padding-left: 10px;
 }
 .features__img{
 	overflow: hidden;
@@ -579,7 +584,7 @@ header{
 	background-color:#494949;
 }
 /*============================
-============Newsletter==========
+============Newsletter========
 ============================== */
 .newsletter{
 	padding-top: 69px;
@@ -658,8 +663,101 @@ header{
 .newsletter-button:hover{
 	background-color: #494949;
 }
+.email__warning{
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: -15px;
+	color:rgb(232, 77, 77);
+	display: none;
 
-
+}
+/*============================
+============Footer========
+============================== */
+footer{
+	padding-top: 53px;
+}
+.footer__inner{
+	display: flex;
+	border-bottom: 1px solid #dfdfdf;
+}
+.footer__info,
+.footer__link,
+.footer__goods,
+.footer__elements,
+.footer__about{
+	width: 20%;
+	margin-bottom: 84px;
+}
+footer h2{
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+.footer-item{
+	color: #7c7c7c;
+	line-height: 28px;
+}
+.footer__info-logo{
+	margin-bottom: 22px;
+}
+.footer__info-text{
+	color: #7c7c7c;
+}
+.footer__info{
+	margin-right: 117px;
+}
+.footer-info__media{
+	display: flex;
+	height: 30px;
+}
+.facebook__image,
+.twitter__image,
+.linkedin__image{
+	width: 15px;
+	height: 15px;
+	fill:#fff;
+}
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover{
+	background-color: #494949;
+}
+.facebook,
+.twitter,
+.linkedin{
+	display: flex;
+	width: 30px;
+	height: 30px;
+	background-color:#494949;
+	border-radius:15px;
+	align-items: center;
+	justify-content: center;
+	margin: 23px 5px 0 5px;
+	transition: background-color .1s linear;
+	flex-shrink: 0;
+}
+.facebook{
+	background-color: #3b579d;
+}
+.twitter{
+	background-color: #55acee;
+}
+.linkedin{
+	background-color: #0e76a8;
+}
+.signature{
+	display: flex;
+}
+.signature p{
+	color: #7c7c7c;
+	margin: 40px 0 43px 0;
+	padding: 0 10px 0 10px;
+	border-right: 1px solid #7c7c7c;
+}
+.signature p:last-child{
+	border-right:none;
+}
 
 
 
@@ -685,5 +783,64 @@ header{
 	.pricing-item{
 		width: 100%;
 	}
+	.footer__info,
+	.footer__link,
+	.footer__elements,
+	.footer__about{
+		width: 50%;
+		margin: 0;
+	}
+	.footer__goods{
+		display: none;
+	}
+	.footer__inner{
+		flex-wrap: wrap;
+	}
+	.Review__item{
+		box-shadow:none;
+	}
 }
+@media screen and (max-width:575px){
+	.feature__title{
+		font-size: 25px;
+	}
+	.features__inner{
+		padding-top: 5px;
+	}
+	.intro{
+		padding-top:310px;
+		color:#494949;
+	}
+	.intro__btn{
+		justify-content: center;
+	}
+	.btn__item{
+		width: 70%;
+		margin:20px 0 20px 0;
+	}
+	.service__head{
+		margin-top: 10px;
+	}
+	.service__title{
+		margin-bottom: 50px;
+	}
+	.pricing-item:first-child{
+		margin-left: 21px;
+	}
+	.pricing-item:last-child{
+		margin-right: 21px;
+	}
+	.pricing-item{
+		margin-bottom: 10px;
+	}
+	.pricing h2{
+		margin-bottom: 40px;
+		word-wrap: none;
+	}
 
+}
+@media screen and (max-width:375px){
+	.services__item{
+		width: 100%;
+	}
+}
