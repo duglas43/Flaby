@@ -6,7 +6,6 @@ $(document).ready(function(){
 document.addEventListener("DOMContentLoaded",()=>{
    let user_email=document.querySelector(".newsletter-user-email");
    let warning=document.querySelector(".email__warning")
-   console.log(warning)
    user_email.addEventListener("blur",()=>{
       var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
       var valid = re.test(user_email.value);
@@ -19,8 +18,12 @@ document.addEventListener("DOMContentLoaded",()=>{
         user_email.style.border=`2px solid rgb(232, 77, 77)`
       };
    })
-
-   
-   
-
+   const burger_btn=document.querySelector(".burger__image");
+   const burger_menu=document.querySelector(".burger-menu");
+   const header=document.querySelector("header");
+   burger_btn.addEventListener("click",()=>{
+    burger_menu.classList.toggle("open");
+    header.classList.toggle("hide__color");
+    document.body.classList.toggle("slide_prevent")
+   })
 });
