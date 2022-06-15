@@ -104,20 +104,47 @@ header{
 .menu__item:hover{
 	background-color: rgba(76,163,230,0.8);
 }
+/* Burger menu */
 .burger{
 	display: none;
 	margin-right: 30px;
 	margin-top: 10px;
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	position: relative;
 }
-.burger__image{
-	width: 50px;
-	height: 50px;
-	fill: #494949;
+.burger__line{
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	transition: .3s all linear;
 }
-/* Burger menu */
+.burger__line1{
+	top: 0;
+}
+.burger__line2,.burger__line3{
+	top: 50%;
+	transform: translateY(-50%);
+}
+.burger__line4{
+	bottom: 0;
+}
+.burger_active .burger__line1,.burger_active .burger__line4{
+	opacity: 0;
+}
+.burger_active .burger__line2{
+	transform: translate(-50%) rotate(45deg);
+}
+.burger_active .burger__line3{
+	transform: translate(-50%) rotate(-45deg);
+}
 .burger-menu{
 	position: fixed;
-	top: 145px;
+	top: 130px;
 	left: -100%;
 	width: 100%;
 	height: 100%;
@@ -133,9 +160,12 @@ header{
 	font-size: 26px;
 	color:#7c7c7c;
 }
+.burger-menu__inner{
+	height: calc(100vh - 145px);
+}
 .burger-menu-list{
 	width: 100%;
-	height: 80vh;
+	height:100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -146,11 +176,15 @@ header{
 .slide_prevent{
 	overflow: hidden;
 }
+.hide{
+	background:none;
+	
+}
 /*============================
 =============Intro============
 ============================== */
 .intro{
-	background: url(/img/header.jpg) left top no-repeat ;
+	background: url(img/header.jpg) left top no-repeat ;
 	background-size: cover;
 	padding-top:400px;
 	padding-bottom: 204px;
