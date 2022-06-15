@@ -522,6 +522,10 @@ header{
 	background: #f4fbfc url(img/pricing-bg.jpg) center bottom no-repeat;
 	background-size:cover;
 	padding-top: 68px;
+	position: relative;
+}
+.wrap__background{
+	background:rgba(180,251,252,0.1);
 }
 .pricing-suptitle{
 	font-family: 'Roboto Slab';
