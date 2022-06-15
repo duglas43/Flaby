@@ -107,8 +107,8 @@ header{
 /* Burger menu */
 .burger{
 	display: none;
-	margin-right: 30px;
-	margin-top: 10px;
+	margin-right: 8%;
+	margin-top: 2%;
 	width: 60px;
 	height: 40px;
 	cursor: pointer;
@@ -137,10 +137,10 @@ header{
 	opacity: 0;
 }
 .burger_active .burger__line2{
-	transform: translate(-50%) rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
 }
 .burger_active .burger__line3{
-	transform: translate(-50%) rotate(-45deg);
+	transform: translateY(-50%) rotate(-45deg);
 }
 .burger-menu{
 	position: fixed;
@@ -297,7 +297,7 @@ header{
 ============Features==========
 ============================== */
 .features{
-	height: 790px;
+	max-height: 790px;
 	background:url(img/feature_background.jpg) center no-repeat;
 	background-size: cover; 
 }
@@ -901,6 +901,25 @@ footer h2{
 	.pricing h2{
 		margin-bottom: 40px;
 		word-wrap: none;
+	}
+	.features__img{
+		display: none;
+	}
+	.features__inner{
+		justify-content: center;
+		padding: 15px 0;
+	}
+	.feature__btn{
+		margin-top: 10px;
+	}
+	.services__item{
+		margin-bottom: 80px;
+	}
+	.resourse{
+		padding-top: 50px;
+	}
+	.resourse__main{
+		margin-bottom: 20px;
 	}
 
 }
