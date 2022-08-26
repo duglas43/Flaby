@@ -30,15 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
     burger_btn.classList.toggle("burger_active");
     intro.classList.toggle("hide");
   });
-  //  Выезд анимации.
-  const animation = document.querySelector(".resourse__animation"),
-    text = document.querySelector(".resourse__text");
-  animation.classList.add("transform__right");
-
-  window.addEventListener("scroll", (e) => {
-    if (pageYOffset > 2632) {
-      animation.classList.remove("transform__right");
-    }
-  });
 });
 
